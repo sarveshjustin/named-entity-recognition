@@ -1,12 +1,10 @@
 # Named Entity Recognition
-
 ## AIM
-
 To develop an LSTM-based model for recognizing the named entities in the text.
-
 ## Problem Statement and Dataset
-![Alt text](image-2.png)
+1.We aim to develop an LSTM-based neural network model using Bidirectional Recurrent Neural Networks for recognizing the named entities in the text. 2.The dataset used has a number of sentences, and each words have their tags. 3.We have to vectorize these words using Embedding techniques to train our model. 4.Bidirectional Recurrent Neural Networks connect two hidden layers of opposite directions to the same output.
 
+![Screenshot 2023-10-18 112630](https://github.com/sarveshjustin/named-entity-recognition/assets/113497481/918688c6-4d33-4040-8a32-874f28a7d957)
 ## DESIGN STEPS
 
 STEP 1:
@@ -29,7 +27,6 @@ We build a build a model using Input, Embedding, Bidirectional LSTM, Spatial Dro
 
 STEP 7:
 We compile the model and fit the train sets and validation sets,We plot the necessary graphs for analysis,A custom prediction is done to test the model manually.
-
 
 ## PROGRAM
 ```
@@ -174,13 +171,11 @@ for w, true, pred in zip(X_test[i], y_true, p[0]):
     print("{:15}{}\t{}".format(words[w-1], tags[true], tags[pred]))
 ```
 ## OUTPUT
-
 ### Training Loss, Validation Loss Vs Iteration Plot
-![Alt text](image.png)
-
-
+![image](https://github.com/sarveshjustin/named-entity-recognition/assets/113497481/3e602ed3-12fa-47a7-8bd0-12c840e20c51)
+### Accuracy, Validation Accuracy Vs Iteration:
+![image](https://github.com/sarveshjustin/named-entity-recognition/assets/113497481/b8591ceb-d46e-4bd9-af95-860e0ad97a68)
 ### Sample Text Prediction
-
-![Alt text](image-1.png)
+![image](https://github.com/sarveshjustin/named-entity-recognition/assets/113497481/4e3e0181-b76f-4d8e-9f10-24cca342c0ac)
 ## RESULT
 Thus, an LSTM-based model for recognizing the named entities in the text is developed.
